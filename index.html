@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DuruPak Temizlik | Bursa Yerinde Koltuk, Yatak ve Halıflex Yıkama</title>
+<meta name="description" content="DuruPak Temizlik: Bursa'da yerinde koltuk, yatak ve halıflex yıkama. Nilüfer, Osmangazi, Yıldırım, Gemlik, Kestel, Mudanya, Orhaneli ve Gürsu. WhatsApp'tan fiyat alın.">
+<meta name="theme-color" content="#0d3460">
+<link rel="canonical" href="https://durupaktemizlik.com/">
+<link rel="icon" type="image/png" href="favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+/* ============================================================
+   HER İŞLETME İÇİN SADECE BURAYI DEĞİŞTİR
+   ============================================================ */
+const C = {
+  name: 'DuruPak Temizlik',
+  phone: '0530 680 38 78',           // ekranda görünen
+  wa: '905306803878',                // WhatsApp: ülke kodu + numara, boşluksuz
+  ig: 'durupaktemizlik_16',          // Instagram kullanıcı adı
+  address: 'Bursa',
+  hours: '',                         // boşsa altbilgide gizlenir
+  color: '#1d5fa3',                  // ana marka rengi (logodaki mavi)
+  items: [                           // talep formu: fiyat yok, sadece adet
+    { k: 'takim', t: 'Koltuk takımı',         s: '3+3+1, 3+2+1 gibi',  u: 'takım' },
+    { k: 'kose',  t: 'Köşe koltuk',           s: 'L veya U köşe',      u: 'adet' },
+    { k: 'tekli', t: 'Tekli koltuk / berjer', s: '',                   u: 'adet' },
+    { k: 'y1',    t: 'Tek kişilik yatak',     s: '',                   u: 'adet' },
+    { k: 'y2',    t: 'Çift kişilik yatak',    s: '',                   u: 'adet' },
+    { k: 'hali',  t: 'Halıflex',              s: 'Yaklaşık metrekare', u: 'm²', step: 5 },
+  ],
+  districts: ['Nilüfer','Osmangazi','Yıldırım','Gemlik','Kestel','Mudanya','Orhaneli','Gürsu'],
+};
+document.documentElement.style.setProperty('--brand', C.color);
+document.documentElement.classList.add('js');
+</script>
+<style>
+:root{
+  --ink:#0c2238; --ink-2:#51657a; --bg:#f5f8fb; --card:#fff; --line:#e1e8f0;
+  --brand:#1d5fa3; --deep:#0d3460; --mint:#8ccdf2; --mint-2:#e7f2fb;
+  --r:22px; --shadow:0 18px 40px -20px rgba(12,34,56,.35);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+svg.i{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.12;letter-spacing:-.025em}
+h2{font-size:clamp(28px,6.4vw,44px);font-weight:800}
+.lead{color:var(--ink-2);font-size:clamp(16px,2.4vw,18px)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--brand);background:var(--mint-2);padding:6px 12px;border-radius:99px;margin-bottom:14px}
+.head{max-width:640px;margin-bottom:32px}
+.head p{margin-top:12px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:inherit;font-weight:700;font-size:16px;padding:16px 22px;border-radius:16px;border:0;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:#1fae5b;color:#fff;box-shadow:0 10px 24px -10px #1fae5b}
+.btn-wa:hover{background:#18994f}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--brand)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(245,248,251,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.logo img{height:42px;width:auto}
+.links{display:none;gap:28px;font-weight:600;font-size:15px;color:var(--ink-2)}
+.links a:hover{color:var(--ink)}
+.call{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;padding:10px 14px;border-radius:12px;background:var(--deep);color:#fff}
+
+/* hero */
+.hero{position:relative;padding:28px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:620px;height:620px;right:-260px;top:-200px;background:radial-gradient(circle,var(--mint) 0,transparent 65%);opacity:.45;z-index:-1}
+.bubble{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0,rgba(255,255,255,.4) 25%,rgba(140,205,242,.25) 60%,rgba(140,205,242,.05) 100%);border:1px solid rgba(255,255,255,.8);z-index:-1;animation:float 9s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-22px)}}
+.hero-grid{display:grid;gap:36px;align-items:center}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:99px;box-shadow:var(--shadow)}
+.dot{width:8px;height:8px;border-radius:50%;background:#1fae5b;box-shadow:0 0 0 0 rgba(31,174,91,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(31,174,91,0)}100%{box-shadow:0 0 0 0 rgba(31,174,91,0)}}
+.hero h1{font-size:clamp(38px,9.6vw,68px);font-weight:800;margin:18px 0 16px}
+.hero h1 em{font-style:normal;color:var(--brand);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.22em;background:var(--mint);opacity:.55;z-index:-1;border-radius:4px}
+.ctas{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.hero-img{position:relative}
+.hero-img video{display:block;width:100%;max-width:400px;aspect-ratio:478/850;height:auto;margin:0 auto;object-fit:cover;border-radius:28px;box-shadow:var(--shadow);background:var(--mint-2)}
+.float-card{position:absolute;background:#fff;border-radius:16px;padding:12px 14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600}
+.float-card strong{display:block;font-size:15px}
+.float-card .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:var(--mint-2);color:var(--brand)}
+.fc1{left:-6px;bottom:24px;animation:float 7s ease-in-out infinite}
+
+/* stats */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+.stat b{display:block;font-size:24px;font-weight:800;letter-spacing:-.03em;color:var(--brand)}
+.stat span{font-size:13px;color:var(--ink-2);font-weight:600}
+
+/* marquee */
+.marquee{background:var(--deep);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+.marquee div{display:inline-flex;gap:36px;animation:slide 30s linear infinite;font-weight:700;font-size:15px}
+.marquee span{display:inline-flex;align-items:center;gap:10px;opacity:.9}
+.marquee span::before{content:"✦";color:var(--mint)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* services */
+.svc-grid{display:grid;gap:12px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;gap:16px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.svc:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:transparent}
+.svc .ic{width:52px;height:52px;border-radius:15px;background:var(--mint-2);color:var(--brand);display:grid;place-items:center;flex:none;font-size:22px}
+.svc h3{font-size:18px;margin-bottom:4px}
+.svc p{font-size:14.5px;color:var(--ink-2)}
+.svc .from{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--brand)}
+
+/* kurumsal */
+.corp{display:grid;gap:28px;align-items:center}
+.corp img{width:100%;max-width:560px;height:auto;margin:0 auto;border-radius:26px;box-shadow:var(--shadow)}
+
+/* talep formu */
+.calc-sec{background:linear-gradient(180deg,var(--bg),#e8f1f9)}
+.calc{display:grid;gap:16px}
+.panel{background:#fff;border-radius:26px;padding:22px;border:1px solid var(--line)}
+.field{margin-bottom:22px}
+.field:last-child{margin-bottom:0}
+.lbl{display:block;font-weight:700;font-size:15px;margin-bottom:10px}
+.items{display:grid;gap:8px}
+.item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 14px;border:1.5px solid var(--line);border-radius:14px;transition:.15s}
+.item.on{border-color:var(--brand);background:var(--mint-2)}
+.item b{display:block;font-size:15px}
+.item small{display:block;color:var(--ink-2);font-size:13px}
+.qty{display:flex;align-items:center;gap:4px;flex:none}
+.qty button{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:20px;font-weight:700;color:var(--deep);cursor:pointer}
+.qty button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.qty output{min-width:46px;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+select,input[type=date]{width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result{background:var(--deep);color:#fff;border-radius:26px;padding:26px;position:relative;overflow:hidden}
+.result::after{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;background:radial-gradient(circle,rgba(140,205,242,.45),transparent 70%);pointer-events:none}
+.result small{opacity:.75;font-weight:600}
+.result .sumlist{list-style:none;padding:0;margin:10px 0 6px;display:grid;gap:6px;font-size:18px;font-weight:700;opacity:1}
+.result .sumlist .empty{font-size:15px;font-weight:600;opacity:.7}
+.result ul{list-style:none;padding:0;margin:18px 0 22px;display:grid;gap:8px;font-size:14px}
+.result li{display:flex;gap:8px;align-items:center;opacity:.9}
+.result li svg{color:var(--mint)}
+.result .btn{width:100%}
+.note{font-size:12px;opacity:.6;margin-top:12px;text-align:center}
+
+/* before after */
+.ba{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:478/470;max-width:620px;margin:0 auto;box-shadow:var(--shadow);--p:50%;user-select:none;background:var(--mint-2)}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--p);width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--p);transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.25);display:grid;place-items:center;pointer-events:none;color:var(--deep);font-weight:800}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba .tag{position:absolute;top:14px;padding:6px 12px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:.08em;background:rgba(0,0,0,.55);color:#fff;pointer-events:none}
+.ba .t1{left:14px}.ba .t2{right:14px;background:var(--mint);color:var(--deep)}
+
+/* steps */
+.steps{display:grid;gap:12px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-size:42px;font-weight:800;color:var(--mint);line-height:1;display:block;margin-bottom:12px}
+.step h3{font-size:19px;margin-bottom:6px}
+.step p{color:var(--ink-2);font-size:15px}
+
+/* yerinde yıkama */
+.guar{background:var(--deep);color:#fff;border-radius:32px;padding:36px 22px;position:relative;overflow:hidden}
+.guar::before{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-200px;background:radial-gradient(circle,rgba(140,205,242,.35),transparent 70%)}
+.guar h2{max-width:720px}
+.guar h2 span{color:var(--mint)}
+.guar-list{display:grid;gap:14px;margin-top:28px;position:relative}
+.guar-list div{display:flex;gap:14px;align-items:flex-start}
+.guar-list .ic{width:44px;height:44px;border-radius:13px;background:rgba(140,205,242,.15);color:var(--mint);display:grid;place-items:center;flex:none}
+.guar-list b{display:block;font-size:16px}
+.guar-list p{font-size:14px;opacity:.75}
+
+/* yorumlar */
+.rev-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 12px;margin:0 -16px;scrollbar-width:none}
+.rev-row::-webkit-scrollbar{display:none}
+.rev{flex:0 0 84%;scroll-snap-align:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rev p{font-size:15.5px}
+.rev .src{display:flex;align-items:center;gap:8px;margin-top:auto;font-size:13px;font-weight:700;color:var(--ink-2)}
+.rev .src svg{color:#1fae5b}
+.rev .g{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#4285f4;color:#fff;font-size:12px}
+.stars{color:#f5a623;letter-spacing:1px}
+
+/* districts */
+.dist{display:flex;flex-wrap:wrap;gap:8px}
+.dist span{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);padding:9px 14px;border-radius:99px;font-weight:600;font-size:14px}
+.dist svg{color:var(--brand)}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:800px}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 20px}
+summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;font-weight:500;color:var(--brand);transition:transform .2s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 18px;color:var(--ink-2)}
+
+/* final cta + footer */
+.final{text-align:center;background:radial-gradient(circle at 50% 0,var(--mint-2),transparent 70%)}
+.final h2{max-width:680px;margin:0 auto}
+.final .ctas{max-width:420px;margin:26px auto 0}
+footer{background:var(--deep);color:rgba(255,255,255,.75);padding:48px 0 120px;font-size:14px}
+.foot{display:grid;gap:28px}
+footer .logo{color:#fff;margin-bottom:12px}
+footer h4{color:#fff;font-size:15px;margin-bottom:10px}
+footer li{list-style:none;margin-bottom:6px}
+footer ul{padding:0}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:20px;font-size:13px}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+.mbar.show{transform:none}
+.mbar .btn{padding:14px 10px;font-size:15px}
+.mbar .btn svg{width:26px;height:26px}
+.fab{display:none}
+.igfab{position:fixed;right:14px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:60;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:28px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);box-shadow:0 10px 24px -8px rgba(214,36,159,.6);transform:translateY(calc(100% + 100px));transition:transform .3s}
+.igfab.show{transform:none}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .ctas{flex-direction:row}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .rev{flex-basis:46%}
+}
+@media (min-width:900px){
+  section{padding:96px 0}
+  .links{display:flex}
+  .call{padding:12px 18px}
+  .hero{padding:56px 0 80px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}
+  .fc1{left:-12px}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .svc{flex-direction:column;padding:26px}
+  .corp{grid-template-columns:1fr 1fr;gap:56px}
+  .rev-row{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;margin:0;padding:0}
+  .calc{grid-template-columns:1.25fr .9fr;align-items:start}
+  .panel{padding:32px}
+  .result{position:sticky;top:90px;padding:32px}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .guar{padding:64px}
+  .guar-list{grid-template-columns:repeat(3,1fr);gap:24px}
+  .foot{grid-template-columns:1.5fr 1fr 1fr 1fr}
+  footer{padding-bottom:48px}
+  .mbar{display:none}
+  .fab{display:grid;position:fixed;right:24px;bottom:24px;z-index:60;width:62px;height:62px;border-radius:50%;background:#1fae5b;color:#fff;place-items:center;box-shadow:0 12px 30px -8px rgba(31,174,91,.7);font-size:28px;transition:transform .2s}
+  .fab:hover{transform:scale(1.08)}
+  .igfab{right:29px;bottom:100px;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="drop" viewBox="0 0 24 24"><path d="M12 2.7S6 9.3 6 14a6 6 0 0 0 12 0c0-4.7-6-11.3-6-11.3z"/></symbol>
+  <symbol id="sofa" viewBox="0 0 24 24"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2zM5 18v2M19 18v2"/></symbol>
+  <symbol id="bed" viewBox="0 0 24 24"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8M2 16h20M6 10V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3"/></symbol>
+  <symbol id="rug" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="1"/><rect x="8" y="7" width="8" height="10" rx="1"/><path d="M7 4V2M10 4V2M14 4V2M17 4V2M7 22v-2M10 22v-2M14 22v-2M17 22v-2"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M3 21l1.7-4.8A9 9 0 1 1 8 19.6z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9a5 5 0 0 1-2.8-2.8l.9-1-1-2z" fill="currentColor" stroke-width="1"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z" fill="currentColor"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+</svg>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo"><img src="logo.png?v=2" alt="DuruPak logo" width="39" height="42"><span data-c="name"></span></a>
+    <nav class="links">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#fiyat">Fiyat Al</a>
+      <a href="#once-sonra">Önce / Sonra</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#sss">SSS</a>
+    </nav>
+    <a class="call" data-tel><svg class="i"><use href="#phone"/></svg><span>Hemen Ara</span></a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <i class="bubble" style="width:70px;height:70px;left:6%;top:12%"></i>
+  <i class="bubble" style="width:34px;height:34px;left:44%;top:6%;animation-delay:-2s"></i>
+  <i class="bubble" style="width:110px;height:110px;right:4%;bottom:6%;animation-delay:-5s"></i>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="live"><i class="dot"></i>Bursa'da yerinde yıkama</span>
+      <h1>Koltuk, yatak ve <em>yerinde</em> halıflex yıkama.</h1>
+      <p class="lead">Nilüfer, Osmangazi, Yıldırım ve 5 ilçede daha koltuk, yatak ve halıflex yıkama. Ne yıkatacağınızı seçin, fiyatı WhatsApp'tan iletelim.</p>
+      <div class="ctas">
+        <a class="btn btn-wa" data-wa="Merhaba, yıkama için fiyat almak istiyorum."><svg class="i"><use href="#wa"/></svg>WhatsApp'tan Fiyat Al</a>
+        <a class="btn btn-ghost" href="#fiyat">Ne yıkatacağınızı seçin →</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <video src="tanitim.mp4?v=2" poster="video-kapak.jpg?v=2" autoplay muted loop playsinline preload="metadata" aria-label="Kirli koltuğun yerinde yıkanması: önce, yıkama ve sonra"></video>
+      <div class="float-card fc1"><span class="ic"><svg class="i"><use href="#home"/></svg></span><div><strong>Yerinde yıkama</strong>Evinizden çıkmadan</div></div>
+    </div>
+  </div>
+  <div class="wrap stats rv" style="margin-top:36px">
+    <div class="stat"><b>Yerinde</b><span>yıkama, taşıma yok</span></div>
+    <div class="stat"><b>8 ilçe</b><span>hizmet bölgesi</span></div>
+    <div class="stat"><b>3 hizmet</b><span>koltuk · yatak · halıflex</span></div>
+    <div class="stat"><b>WhatsApp</b><span>ile hızlı fiyat</span></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div id="mq"></div></div>
+
+<!-- SERVICES -->
+<section id="hizmetler">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><svg class="i"><use href="#sparkle"/></svg>Hizmetlerimiz</span>
+      <h2>Taşıma yok, bekleme yok. Evinizde yıkıyoruz.</h2>
+      <p class="lead">Koltuğunuzu, yatağınızı ya da halıflex'inizi bir yere götürmenize gerek yok. Ekibimiz adresinize gelir.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc rv"><span class="ic"><svg class="i"><use href="#sofa"/></svg></span><div><h3>Koltuk Yıkama</h3><p>Koltuk takımı, köşe koltuk ve tekli koltuklar evinizde, yerinde yıkanır.</p><a class="from" href="#fiyat">Fiyat al →</a></div></div>
+      <div class="svc rv"><span class="ic"><svg class="i"><use href="#bed"/></svg></span><div><h3>Yatak Yıkama</h3><p>Tek ve çift kişilik yataklar yerinde yıkanır.</p><a class="from" href="#fiyat">Fiyat al →</a></div></div>
+      <div class="svc rv"><span class="ic"><svg class="i"><use href="#rug"/></svg></span><div><h3>Halıflex Yıkama</h3><p>Duvardan duvara halıflex, yerinden sökülmeden yıkanır.</p><a class="from" href="#fiyat">Fiyat al →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- KURUMSAL -->
+<section id="kurumsal" style="padding-top:0">
+  <div class="wrap corp">
+    <div class="rv">
+      <span class="eyebrow"><svg class="i"><use href="#sparkle"/></svg>Kurumsal</span>
+      <h2>Otel, ofis ve iş yerlerinde halıflex yıkama.</h2>
+      <p class="lead" style="margin-top:12px">İş yerinizin halıflex'ini yerinde yıkıyoruz. Teklif için WhatsApp'tan yazın.</p>
+      <div class="dist" style="margin-top:20px"><span>Otel</span><span>Ofis</span><span>İş yeri</span></div>
+      <div class="ctas"><a class="btn btn-wa" data-wa="Merhaba, iş yerimiz için halıflex yıkama teklifi almak istiyorum."><svg class="i"><use href="#wa"/></svg>Kurumsal Teklif Al</a></div>
+    </div>
+    <img class="rv" src="kurumsal.jpg" alt="DuruPak otel, ofis ve iş yerlerinde halıflex yıkama hizmeti" width="1000" height="1000" loading="lazy">
+  </div>
+</section>
+
+<!-- TALEP FORMU -->
+<section id="fiyat" class="calc-sec">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><svg class="i"><use href="#sparkle"/></svg>Fiyat alın</span>
+      <h2>Ne yıkatacağınızı seçin, fiyatı biz yazalım.</h2>
+      <p class="lead">Adetleri seçin, tek dokunuşla WhatsApp'tan gönderin. Fiyatınızı WhatsApp'tan iletiyoruz.</p>
+    </div>
+    <form class="calc" id="calc" onsubmit="return false">
+      <div class="panel rv">
+        <div class="field"><div class="lbl">Neleri yıkatmak istiyorsunuz?</div><div class="items" id="items"></div></div>
+        <div class="field two">
+          <div><label for="ilce" class="lbl">İlçe</label><select id="ilce" name="ilce"></select></div>
+          <div><label for="tarih" class="lbl">Tarih</label><input type="date" id="tarih" name="tarih"></div>
+        </div>
+      </div>
+      <div class="result rv">
+        <small>Talebiniz</small>
+        <ul class="sumlist" id="sumlist"></ul>
+        <small id="sum"></small>
+        <ul>
+          <li><svg class="i"><use href="#check"/></svg>Yerinde yıkama, taşıma yok</li>
+          <li><svg class="i"><use href="#check"/></svg>Fiyat sormak ücretsiz</li>
+          <li><svg class="i"><use href="#check"/></svg>Bursa'da 8 ilçede hizmet</li>
+        </ul>
+        <a class="btn btn-wa" id="book" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>WhatsApp'tan fiyat al</a>
+        <p class="note">Mesajınız hazır gelir, siz sadece gönderirsiniz.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="once-sonra">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><svg class="i"><use href="#sparkle"/></svg>Önce / Sonra</span>
+      <h2>Farkı kendiniz görün.</h2>
+      <p class="lead">Kendi işimizden: aynı koltuk, yıkamadan önce ve sonra. Çubuğu sağa sola kaydırın.</p>
+    </div>
+    <div class="ba rv" id="ba">
+      <img src="sonra.jpg?v=2" alt="Yıkama sonrası koltuk" width="478" height="470" loading="lazy">
+      <div class="before"><img src="once.jpg?v=2" alt="Yıkama öncesi kirli koltuk" width="478" height="470" loading="lazy"></div>
+      <span class="tag t1">ÖNCE</span><span class="tag t2">SONRA</span>
+      <div class="bar"></div><div class="knob">⇆</div>
+      <input type="range" min="0" max="100" value="50" aria-label="Önce ve sonra fotoğrafını karşılaştır">
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow"><svg class="i"><use href="#sparkle"/></svg>Nasıl çalışıyor?</span><h2>3 adımda tertemiz.</h2></div>
+    <div class="steps">
+      <div class="step rv"><h3>Seçin</h3><p>Formdan neleri yıkatacağınızı seçin ya da direkt WhatsApp'tan yazın.</p></div>
+      <div class="step rv"><h3>Fiyatınızı alın</h3><p>Fiyatı WhatsApp'tan iletiyoruz, size uyan günü birlikte belirliyoruz.</p></div>
+      <div class="step rv"><h3>Yerinde yıkayalım</h3><p>Ekibimiz adresinize gelir; koltuk, yatak ve halıflex'inizi evinizde yıkar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- YERİNDE YIKAMA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="guar rv">
+      <span class="eyebrow" style="background:rgba(140,205,242,.15);color:var(--mint)"><svg class="i"><use href="#drop"/></svg>Neden yerinde yıkama?</span>
+      <h2>Hiçbir şeyi taşımadan, <span>evinizde</span> tertemiz.</h2>
+      <div class="guar-list">
+        <div><span class="ic"><svg class="i"><use href="#home"/></svg></span><div><b>Evinizden çıkmıyor</b><p>Koltuk, yatak ya da halıflex'inizi bir yere taşımanıza gerek yok.</p></div></div>
+        <div><span class="ic"><svg class="i"><use href="#wa"/></svg></span><div><b>Fiyat önceden belli</b><p>İşe başlamadan fiyatı WhatsApp'tan öğrenirsiniz.</p></div></div>
+        <div><span class="ic"><svg class="i"><use href="#pin"/></svg></span><div><b>8 ilçede hizmet</b><p>Bursa merkez ve çevre ilçelerde adresinize geliyoruz.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YORUMLAR: müşterilerin kendi sözleri (Instagram "Memnuniyet" hikâyeleri, 09.10.2026) -->
+<section id="yorumlar" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><svg class="i"><use href="#sparkle"/></svg>Müşteri memnuniyeti</span>
+      <h2>Müşterilerimiz ne diyor?</h2>
+      <p class="lead">Müşterilerimizden gelen mesajlar ve Google yorumları.</p>
+    </div>
+    <div class="rev-row">
+      <div class="rev rv"><p>“Daha önce birkaç firmaya koltuklarımı yıkatmıştım ancak evi resmen su içinde bırakıp gittiler. Sizin yıkamanızdaki hassasiyet ve dikkatli çalışmanız çok güzeldi. Soran herkese tavsiye ediyorum.”</p><span class="src"><svg class="i"><use href="#wa"/></svg>WhatsApp mesajı · Yatak yıkama</span></div>
+      <div class="rev rv"><span class="stars">★★★★★</span><p>“Koltuğum temizlendikten sonra yeni alınmış gibi oldu. Ferahlığı da bonusu oldu. DuruPak gerçekten işinin ehli.”</p><span class="src"><b class="g">G</b>Google yorumu · Sadık Ç.</span></div>
+      <div class="rev rv"><p>“Koltuk takımımızı daha önce de farklı firmalarda yıkatmıştık, fakat DuruPak'ta yıkattığımızda daha önce hiç temizlenmemiş olduğunu fark ettik. Mis gibi kokusu ve tertemiz görüntüsüyle emeğinin hakkını gerçekten veriyor.”</p><span class="src"><svg class="i"><use href="#wa"/></svg>WhatsApp mesajı · Koltuk yıkama</span></div>
+      <div class="rev rv"><p>“Her şey için çok teşekkür ederim, harikasınız. Bu kadarını tahmin etmemiştim. Tavsiye üzerine sizi tercih ettim, çok memnun kaldım.”</p><span class="src"><svg class="i"><use href="#wa"/></svg>WhatsApp mesajı · Koltuk yıkama</span></div>
+      <div class="rev rv"><span class="stars">★★★★★</span><p>“Kaliteli ve güvenilir bir işçilik. Gerçekten herkese öneririm. Ben memnun kaldım, siz de memnun kalırsınız.”</p><span class="src"><b class="g">G</b>Google yorumu · Berat E.</span></div>
+      <div class="rev rv"><p>“Çok çok memnun kaldım. Daha önce birçok koltuk firmasına yıkattım, yerler su olmuştu. Elinize, emeğinize sağlık.”</p><span class="src"><svg class="i"><use href="#wa"/></svg>WhatsApp mesajı · Koltuk yıkama</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DISTRICTS -->
+<section id="bolgeler" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow"><svg class="i"><use href="#pin"/></svg>Hizmet bölgeleri</span><h2>Bu ilçelerde adresinize geliyoruz.</h2></div>
+    <div class="dist rv" id="dist"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="sss" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow"><svg class="i"><use href="#sparkle"/></svg>Sık sorulanlar</span><h2>Aklınızdaki sorular.</h2></div>
+    <div class="faq rv">
+      <details open><summary>Yıkama nerede yapılıyor?</summary><p>Evinizde ya da iş yerinizde, yerinde yapıyoruz. Koltuk, yatak ya da halıflex'inizi taşımanıza gerek yok.</p></details>
+      <details><summary>Fiyatı nasıl öğrenirim?</summary><p>Yukarıdaki formdan neleri yıkatacağınızı seçip WhatsApp'tan gönderin, fiyatı size iletelim. İsterseniz direkt arayabilirsiniz.</p></details>
+      <details><summary>Hangi bölgelere geliyorsunuz?</summary><p id="faq-dist"></p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap rv">
+    <h2>Koltuklarınız bu hafta tertemiz olsun.</h2>
+    <p class="lead" style="margin-top:14px">Fiyat almak için WhatsApp'tan yazmanız yeterli.</p>
+    <div class="ctas">
+      <a class="btn btn-wa" data-wa="Merhaba, yıkama için randevu almak istiyorum."><svg class="i"><use href="#wa"/></svg>WhatsApp'tan Yaz</a>
+      <a class="btn btn-ghost" data-tel><svg class="i"><use href="#phone"/></svg>Ara</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="logo"><img src="logo-beyaz.png?v=2" alt="DuruPak logo" width="39" height="42"><span data-c="name"></span></div><p>Bursa'da yerinde koltuk, yatak ve halıflex yıkama.</p></div>
+      <div><h4>Hizmetler</h4><ul><li>Koltuk Yıkama</li><li>Yatak Yıkama</li><li>Halıflex Yıkama</li></ul></div>
+      <div><h4>İletişim</h4><ul><li><a data-tel><span data-c="phone"></span></a></li><li><a data-wa="Merhaba">WhatsApp</a></li><li><a id="ig" target="_blank" rel="noopener"></a></li><li data-c="address"></li></ul></div>
+      <div id="hours"><h4>Çalışma saatleri</h4><ul><li data-c="hours"></li></ul></div>
+    </div>
+    <div class="copy">© <span id="yr"></span> <span data-c="name"></span>. Tüm hakları saklıdır.</div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn btn-ghost" data-tel><svg class="i"><use href="#phone"/></svg>Ara</a>
+  <a class="btn btn-wa" data-wa="Merhaba, yıkama için fiyat almak istiyorum."><svg class="i"><use href="#wa"/></svg>WhatsApp</a>
+</div>
+<a class="fab" data-wa="Merhaba, yıkama için fiyat almak istiyorum." aria-label="WhatsApp'tan yazın"><svg class="i"><use href="#wa"/></svg></a>
+<a class="igfab" id="igfab" target="_blank" rel="noopener" aria-label="Instagram hesabımız"><svg class="i"><use href="#insta"/></svg></a>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
+const wa = t => `https://wa.me/${C.wa}?text=${encodeURIComponent(t)}`;
+
+// config → sayfa
+$$('[data-c]').forEach(e => e.textContent = C[e.dataset.c]);
+$$('[data-tel]').forEach(e => e.href = 'tel:' + C.phone.replace(/\s/g, ''));
+$$('[data-wa]').forEach(e => { e.href = wa(e.dataset.wa); e.target = '_blank'; e.rel = 'noopener'; });
+if (!C.hours) $('#hours').remove();
+$('#ig').href = $('#igfab').href = 'https://instagram.com/' + C.ig; $('#ig').textContent = 'Instagram: @' + C.ig;
+$('#yr').textContent = new Date().getFullYear();
+$('#mq').innerHTML = [...C.districts, ...C.districts, ...C.districts, ...C.districts].map(d => `<span>${d}</span>`).join('');
+$('#dist').innerHTML = C.districts.map(d => `<span><svg class="i"><use href="#pin"/></svg>${d}</span>`).join('');
+$('#faq-dist').textContent = C.districts.join(', ') + '.';
+
+// talep formu
+const f = $('#calc'), q = {};
+$('#items').innerHTML = C.items.map(i => (q[i.k] = 0,
+  `<div class="item" data-k="${i.k}"><div><b>${i.t}</b>${i.s ? `<small>${i.s}</small>` : ''}</div>` +
+  `<div class="qty"><button type="button" data-d="-1" aria-label="${i.t} azalt">−</button><output>0</output><button type="button" data-d="1" aria-label="${i.t} artır">+</button></div></div>`)).join('');
+f.ilce.innerHTML = C.districts.map(d => `<option>${d}</option>`).join('');
+f.tarih.min = new Date().toISOString().slice(0, 10);
+
+$('#items').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const el = b.closest('.item'), i = C.items.find(x => x.k === el.dataset.k);
+  q[i.k] = Math.max(0, q[i.k] + b.dataset.d * (i.step || 1));
+  upd();
+});
+
+function upd() {
+  const sel = C.items.filter(i => q[i.k]);
+  const lines = sel.map(i => `${i.t}: ${q[i.k]} ${i.u}`);
+  const date = f.tarih.value ? new Date(f.tarih.value).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' }) : 'esnek';
+  $$('.item').forEach(el => {
+    el.querySelector('output').textContent = q[el.dataset.k];
+    el.classList.toggle('on', q[el.dataset.k] > 0);
+  });
+  $('#sumlist').innerHTML = lines.length ? lines.map(l => `<li>${l}</li>`).join('') : '<li class="empty">Yıkatmak istediklerinizin adedini seçin.</li>';
+  $('#sum').textContent = `${f.ilce.value} · ${date}`;
+  $('#book').href = wa(`Merhaba ${C.name}, sitenizden yazıyorum. Fiyat alabilir miyim?\n` +
+    (lines.length ? lines.map(l => '• ' + l).join('\n') + '\n' : '') +
+    `• İlçe: ${f.ilce.value}\n• Tarih: ${date}`);
+}
+f.addEventListener('input', upd);
+upd();
+
+// önce / sonra
+$('#ba input').addEventListener('input', e => $('#ba').style.setProperty('--p', e.target.value + '%'));
+
+// header gölgesi + mobil bar
+addEventListener('scroll', () => {
+  $('header').classList.toggle('scrolled', scrollY > 10);
+  $('#mbar').classList.toggle('show', scrollY > 500);
+  $('#igfab').classList.toggle('show', scrollY > 500);
+}, { passive: true });
+
+// scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && (e.target.classList.add('in'), io.unobserve(e.target))), { threshold: .12 });
+$$('.rv').forEach(e => io.observe(e));
+</script>
+</body>
+</html>
